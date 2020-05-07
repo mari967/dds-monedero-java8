@@ -13,6 +13,9 @@ public class Cuenta {
 
   private double saldo = 0;
   private List<Movimiento> movimientos = new ArrayList<>();
+  private int cantMaxDepositos = 3;
+  private int montoMaxExtraccion = 1000;
+
 
   public Cuenta() {
     saldo = 0;
@@ -27,38 +30,42 @@ public class Cuenta {
   }
 
   public void poner(double cuanto) {
-    if (cuanto <= 0) {
-      throw new MontoNegativoException(cuanto + ": el monto a ingresar debe ser un valor positivo");
-    }
 
-    if (getMovimientos().stream().filter(movimiento -> movimiento.isDeposito()).count() >= 3) {
-      throw new MaximaCantidadDepositosException("Ya excedio los " + 3 + " depositos diarios");
+    controlarMonto(cuanto);
+
+    if (getMovimientos().stream().filter(movimiento -> movimiento.getTipoMovimiento() instanceof Deposito).count() >= 3) {
+      throw new MaximaCantidadDepositosException("Ya excedio los " + cantMaxDepositos + " depositos diarios");
     }
 
     agregateA(new Movimiento(LocalDate.now(), cuanto, new Deposito())); // Debe hacerlo cuenta
   }
 
   public void sacar(double cuanto) {
-    if (cuanto <= 0) {
-      throw new MontoNegativoException(cuanto + ": el monto a ingresar debe ser un valor positivo");
-    }
+
+    controlarMonto(cuanto);
+
     if (getSaldo() - cuanto < 0) {
       throw new SaldoMenorException("No puede sacar mas de " + getSaldo() + " $");
     }
     double montoExtraidoHoy = getMontoExtraidoA(LocalDate.now());
-    double limite = 1000 - montoExtraidoHoy;
+    double limite = montoMaxExtraccion - montoExtraidoHoy;
+
     if (cuanto > limite) {
-      throw new MaximoExtraccionDiarioException("No puede extraer mas de $ " + 1000
+      throw new MaximoExtraccionDiarioException("No puede extraer mas de $ " + montoMaxExtraccion
               + " diarios, límite: " + limite);
     }
-    agregateA(new Movimiento(LocalDate.now(), cuanto, new Extraccion())); //Debe hacerlo cuenta
+    agregateA(new Movimiento(LocalDate.now(), cuanto, new Extraccion()));
   }
 
+  private void controlarMonto(double cuanto) {
+    if (cuanto <= 0) {
+      throw new MontoNegativoException(cuanto + ": el monto a ingresar debe ser un valor positivo");
+    }
+  }
 
 
   public double getMontoExtraidoA(LocalDate fecha) {
     return getMovimientos().stream()
-            //.filter(movimiento -> !movimiento.isDeposito() && movimiento.getFecha().equals(fecha))
             .filter(movimiento -> movimiento.ocurrioOperacion(new Extraccion(), fecha))
             .mapToDouble(Movimiento::getMonto)
             .sum();

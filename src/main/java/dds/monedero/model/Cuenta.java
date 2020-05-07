@@ -54,9 +54,9 @@ public class Cuenta {
     new Movimiento(LocalDate.now(), cuanto, false).agregateA(this); //Debe hacerlo cuenta
   }
 
-  public void agregarMovimiento(LocalDate fecha, double cuanto, boolean esDeposito) {
-    Movimiento movimiento = new Movimiento(fecha, cuanto, esDeposito);
-    movimientos.add(movimiento);
+  public void agregarMovimiento(Movimiento unMovimiento) {
+    //Movimiento movimiento = new Movimiento(fecha, cuanto, esDeposito);
+    movimientos.add(unMovimiento);
   }
 
   public double getMontoExtraidoA(LocalDate fecha) {
@@ -81,7 +81,7 @@ public class Cuenta {
 
   public void agregateA(Movimiento unMovimiento) {
     setSaldo(calcularValor(unMovimiento));
-    agregarMovimiento(fecha, monto, esDeposito);
+    agregarMovimiento(fecha);
   }
 
   public double calcularValor(Movimiento unMovimiento) {

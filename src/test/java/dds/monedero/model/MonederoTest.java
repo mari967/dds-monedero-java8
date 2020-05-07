@@ -29,6 +29,14 @@ public class MonederoTest {
   }
 
   @Test
+  public void Poner1500ySacar600dejaSaldo900() {
+    cuenta.poner(1500);
+    cuenta.sacar(600);
+    Assert.assertEquals(900.0, cuenta.getSaldo(), 0.01);
+  }
+
+
+  @Test
   public void TresDepositos() {
     cuenta.poner(1500);
     cuenta.poner(456);
@@ -59,6 +67,17 @@ public class MonederoTest {
   @Test(expected = MontoNegativoException.class)
   public void ExtraerMontoNegativo() {
     cuenta.sacar(-500);
+  }
+
+  @Test
+  public void cantMovimientosIgualAcantOperacionesCorrectas() {
+
+    cuenta.poner(1500);
+    cuenta.poner(456);
+    cuenta.sacar(10);
+    cuenta.poner(245);  //Cuatro operaciones
+
+    Assert.assertEquals(4,cuenta.getMovimientos().size(), 0.01);
   }
 
 }

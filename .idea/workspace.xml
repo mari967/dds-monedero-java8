@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48f1c1a6-32cd-4a2a-9a91-aa171924c75b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dds/monedero/model/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dds/monedero/model/Cuenta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dds/monedero/model/Deposito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dds/monedero/model/Deposito.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dds/monedero/model/MonederoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dds/monedero/model/MonederoTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,7 +21,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dds/monedero/model/Movimiento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
+            <state relative-caret-position="611">
               <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
               <folding>
                 <element signature="e#640#641#0" expanded="true" />
@@ -60,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dds/monedero/model/Cuenta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="68" column="3" lean-forward="true" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
+            <state relative-caret-position="1444">
+              <caret line="98" column="30" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="30" />
               <folding>
                 <element signature="e#627#628#0" expanded="true" />
                 <element signature="e#667#668#0" expanded="true" />
@@ -77,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/dds/monedero/model/MonederoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+            <state relative-caret-position="172">
+              <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
               <folding>
                 <element signature="e#579#580#0" expanded="true" />
                 <element signature="e#608#609#0" expanded="true" />
@@ -109,9 +108,9 @@
         <option value="$PROJECT_DIR$/src/main/java/dds/monedero/model/TipoMovimiento.java" />
         <option value="$PROJECT_DIR$/src/main/java/dds/monedero/model/Extraccion.java" />
         <option value="$PROJECT_DIR$/src/main/java/dds/monedero/model/Movimiento.java" />
-        <option value="$PROJECT_DIR$/src/test/java/dds/monedero/model/MonederoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/dds/monedero/model/Deposito.java" />
         <option value="$PROJECT_DIR$/src/main/java/dds/monedero/model/Cuenta.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dds/monedero/model/MonederoTest.java" />
       </list>
     </option>
   </component>
@@ -213,6 +212,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -259,6 +259,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MonederoTest.Poner1500ySacar600dejaSaldo900" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dds.monedero" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dds.monedero.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dds.monedero.model" />
+      <option name="MAIN_CLASS_NAME" value="dds.monedero.model.MonederoTest" />
+      <option name="METHOD_NAME" value="Poner1500ySacar600dejaSaldo900" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MonederoTest.TresDepositos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dds.monedero" />
       <extension name="coverage">
@@ -278,6 +294,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MonederoTest" />
+        <item itemvalue="JUnit.MonederoTest.Poner1500ySacar600dejaSaldo900" />
         <item itemvalue="JUnit.MonederoTest.Poner" />
         <item itemvalue="JUnit.MonederoTest.TresDepositos" />
       </list>
@@ -297,9 +314,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MonederoTest - 2020.05.06 at 22h 01m 26s.xml">
-      <configuration name="MonederoTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MonederoTest_TresDepositos - 2020.05.06 at 22h 10m 31s.xml">
       <configuration name="MonederoTest.TresDepositos" configurationId="JUnit" />
     </history-entry>
@@ -318,6 +332,18 @@
     <history-entry file="MonederoTest - 2020.05.06 at 22h 18m 29s.xml">
       <configuration name="MonederoTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MonederoTest_Poner1500ySacar600dejaSaldo900 - 2020.05.06 at 22h 46m 06s.xml">
+      <configuration name="MonederoTest.Poner1500ySacar600dejaSaldo900" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MonederoTest - 2020.05.06 at 22h 57m 38s.xml">
+      <configuration name="MonederoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MonederoTest - 2020.05.06 at 22h 58m 13s.xml">
+      <configuration name="MonederoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MonederoTest - 2020.05.06 at 22h 58m 34s.xml">
+      <configuration name="MonederoTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -328,7 +354,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
@@ -336,7 +362,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -352,36 +378,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/dds/monedero/model/Movimiento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
-          <folding>
-            <element signature="e#640#641#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#1234#1235#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dds/monedero/model/TipoMovimiento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dds/monedero/model/MonederoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding>
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dds/monedero/model/Extraccion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -396,10 +392,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dds/monedero/model/Movimiento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+          <folding>
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#1234#1235#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dds/monedero/model/Cuenta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="68" column="3" lean-forward="true" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
+        <state relative-caret-position="1444">
+          <caret line="98" column="30" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="30" />
           <folding>
             <element signature="e#627#628#0" expanded="true" />
             <element signature="e#667#668#0" expanded="true" />
@@ -407,6 +415,24 @@
             <element signature="e#2325#2326#0" expanded="true" />
             <element signature="e#2393#2394#0" expanded="true" />
             <element signature="e#2827#2828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dds/monedero/model/TipoMovimiento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dds/monedero/model/MonederoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
+          <folding>
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
           </folding>
         </state>
       </provider>

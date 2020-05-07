@@ -19,7 +19,7 @@ public class Cuenta {
 
   public Cuenta() {
     saldo = 0;
-  }
+  } // pa ké?
 
   public Cuenta(double montoInicial) {
     saldo = montoInicial;
@@ -33,7 +33,7 @@ public class Cuenta {
 
     controlarMonto(cuanto);
 
-    if (getMovimientos().stream().filter(movimiento -> movimiento.getTipoMovimiento() instanceof Deposito).count() >= 3) {
+    if (getMovimientos().stream().filter(movimiento -> movimiento.getTipoMovimiento() instanceof Deposito).count() >= cantMaxDepositos) {
       throw new MaximaCantidadDepositosException("Ya excedio los " + cantMaxDepositos + " depositos diarios");
     }
 
@@ -47,6 +47,7 @@ public class Cuenta {
     if (getSaldo() - cuanto < 0) {
       throw new SaldoMenorException("No puede sacar mas de " + getSaldo() + " $");
     }
+
     double montoExtraidoHoy = getMontoExtraidoA(LocalDate.now());
     double limite = montoMaxExtraccion - montoExtraidoHoy;
 

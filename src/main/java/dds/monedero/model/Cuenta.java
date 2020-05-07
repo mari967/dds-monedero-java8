@@ -33,7 +33,8 @@ public class Cuenta {
 
     controlarMonto(cuanto);
 
-    if (getMovimientos().stream().filter(movimiento -> movimiento.getTipoMovimiento() instanceof Deposito).count() >= cantMaxDepositos) {
+    if (getMovimientos().stream().filter(movimiento -> movimiento.getTipoMovimiento() instanceof Deposito).count()
+            >= cantMaxDepositos) {
       throw new MaximaCantidadDepositosException("Ya excedio los " + cantMaxDepositos + " depositos diarios");
     }
 
@@ -85,7 +86,7 @@ public class Cuenta {
   }
 
 
-  public void agregateA(Movimiento unMovimiento) {
+  private void agregateA(Movimiento unMovimiento) {
     setSaldo(calcularValor(unMovimiento));
     movimientos.add(unMovimiento);
   }
@@ -95,7 +96,7 @@ public class Cuenta {
     movimientos.add(unMovimiento);
   }*/
 
-  public double calcularValor(Movimiento unMovimiento) {
+  private double calcularValor(Movimiento unMovimiento) {
     return getSaldo() + unMovimiento.getMontoConSigno();
   }
 }
